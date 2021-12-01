@@ -1,0 +1,69 @@
+.gastoEnLista{
+    background-color: rgb(131, 204, 253);
+
+    width: 90vw;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    font-family: sans-serif;
+
+    cursor:help;
+
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+
+    display: flex;
+    align-items: center;
+}
+
+.contenedorInfoGastoEnLista{
+    width: 90%;
+    padding-left: 20px;
+}
+
+.gastoEnLista:hover{
+    background-color: rgb(155, 215, 255);
+}
+
+.contenedorInfoGastoEnLista h4, .contenedorInfoGastoEnLista p{
+    margin:5px;
+    color: rgb(246, 252, 248);
+}
+
+
+.contenedorBotonGastoEnLista{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content:flex-end;
+    align-items:center;
+}
+
+.contenedorBotonGastoEnLista button{
+    background-color:rgba(172, 128, 128,.0);
+    margin: 10px;
+    margin-right:20px;
+    border:none;
+    cursor:pointer;
+    width:25px;
+}
+
+.contenedorBotonGastoEnLista img{
+    width:30px;
+}
+
+.contenedorBotonGastoEnLista img:hover{
+    width:35px;
+}
+
+.gastoEnLista p{
+    font-weight:bold;
+    color:rgb(194, 134, 6) ;
+}

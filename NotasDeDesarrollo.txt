@@ -1,0 +1,14 @@
+Archivos JavaScript al final del body
+De esta manera carga todas las funciones
+Y no causa conflicto al momento de llamarlas
+
+Tampoco funcionaban los AddEventListener
+Porque Hacía "Dispatch event" a una función que aún no existía
+
+OJO
+Los archivos declarados en el <head> cargan 1 vez
+En el body, se mantienen activos
+
+Traer Scripts que traigan datos en el <head>
+Funcionalidad... en el body
+Porque para ocupar elementos del body, primero debe cargar el body....!!
