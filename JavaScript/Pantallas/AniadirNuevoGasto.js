@@ -5,7 +5,7 @@ let htmlInterface_AniadirNuevoGasto =
 
             <div id="htmlInterface_AniadirNuevoGasto">
                 <h1>Mi Control De Gastos.com</h1>
-                <button onclick="_quitarInterface()" id="buttonX">X</button>
+                <button onclick="quitarAniadirNuevoGasto()" id="buttonX">X</button>
                 <div id="formAniadirNuevoGasto">
                     <form id="formDatosNuevoGasto">
                         
@@ -20,16 +20,19 @@ let htmlInterface_AniadirNuevoGasto =
             </div>
 `;
 
-function _ponerInterface() {
-  console.log("_ponerInterface");
-  let aniadirNuevoGasto = document.getElementById("aniadirNuevoGasto");
-  aniadirNuevoGasto.innerHTML = htmlInterface_AniadirNuevoGasto;
+let aniadirNuevoGasto = document.getElementById("aniadirNuevoGasto");
+//Inicio del programa
+quitarAniadirNuevoGasto();
+
+function ponerAniadirNuevoGasto() {
+  aniadirNuevoGasto.setAttribute("style",           `display:block;`);
+  let tituloGasto = document.getElementById("tituloGasto").value="";
+  let descripcionGasto = document.getElementById("descripcionGasto").value="";
+  let cantidadGasto = document.getElementById("cantidadGasto").value="";
 }
 
-function _quitarInterface() {
-  console.log("_quitarInterface");
-  let aniadirNuevoGasto = document.getElementById("aniadirNuevoGasto");
-  aniadirNuevoGasto.innerHTML = "";
+function quitarAniadirNuevoGasto() {
+  aniadirNuevoGasto.setAttribute("style",           `display:none;`);
 }
 
 //Las funciones que usen let en el archivo JavaScript se aislan
@@ -50,8 +53,7 @@ let __botonEnviarFormulario = function () {
   }
 
   if (cantidadGasto.length <= 0) {
-    alert("Por favor, añade una cantidad");
-    return false;
+    cantidadGasto = 0;
   }
 
   let data = {
@@ -61,7 +63,7 @@ let __botonEnviarFormulario = function () {
     id,
   };
 
-  _quitarInterface();
+  quitarAniadirNuevoGasto();
 
   dispatchEvent(
     new CustomEvent("aniadirNuevoGasto", {

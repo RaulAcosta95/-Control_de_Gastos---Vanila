@@ -64,12 +64,28 @@
           </button>
         </article>
         <article id="ContenedorBotonNuevoGasto">
-          <button id="botonNuevoGasto" onclick="_ponerInterface()">
+          <button id="botonNuevoGasto" onclick="ponerAniadirNuevoGasto()">
             New Gasto
           </button>
         </article>
         <!-- AniadirNuevoGasto -->
-        <article id="aniadirNuevoGasto"></article>
+        <article id="aniadirNuevoGasto">
+          <div id="htmlInterface_AniadirNuevoGasto">
+            <h1>Mi Control De Gastos.com</h1>
+            <button onclick="quitarAniadirNuevoGasto()" id="buttonX">X</button>
+            <div id="formAniadirNuevoGasto">
+                <form id="formDatosNuevoGasto">
+                    
+                    <input type="text" id="tituloGasto" placeholder="Título del gasto">
+                    
+                    <input type="text" id="descripcionGasto" placeholder="Descripción del gasto">
+                    
+                    <input type="number" id="cantidadGasto" placeholder="$000">
+                </form>
+                <button onclick="__botonEnviarFormulario()" id="botonEnviarFormulario">Enviar</button>
+            </div>
+        </div>
+        </article>
   
         <!-- Lista de Gastos -->
         <article id="ListaDeGastos"></article>
