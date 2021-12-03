@@ -1,11 +1,9 @@
 #buttonX {
   position: absolute;
-  right: 150px;
+  right: 30px;
   top: 10px;
   height: 50px;
   width: 50px;
-
-  margin-bottom: 20px;
 
   cursor: pointer;
 

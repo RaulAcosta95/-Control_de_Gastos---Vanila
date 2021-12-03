@@ -14,12 +14,12 @@ const ASSETS = [
   "/Css/article1.css",
   "/Css/article2.css",
   "/Css/article2Movile.css",
-  "/Css/article3.css",
   "/Css/body.css",
   "/Css/botonNuevoGasto.css",
   "/Css/buttonX.css",
   "/Css/gastoEnLista.css",
   "/Css/gastoEnListaDesktop.css",
+  "/Css/ListaDeGastos.css",
 
   "/Imagenes/iconos/maskable_icon_x72.png",
   "/Imagenes/iconos/maskable_icon_x96.png",

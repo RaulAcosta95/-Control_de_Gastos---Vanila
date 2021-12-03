@@ -4,7 +4,7 @@ let htmlInterface_AniadirNuevoGasto =
   ` 
 
             <div id="htmlInterface_AniadirNuevoGasto">
-                <h3>Mi Control De Gastos.com</h3>
+                <h1>Mi Control De Gastos.com</h1>
                 <button onclick="_quitarInterface()" id="buttonX">X</button>
                 <div id="formAniadirNuevoGasto">
                     <form id="formDatosNuevoGasto">

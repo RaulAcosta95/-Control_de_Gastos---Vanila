@@ -1,3 +1,8 @@
+#ContenedorBotonNuevoGasto{
+  display:flex;
+  justify-content:center;
+}
+
 #botonNuevoGasto {
   z-index: 1;
   margin-top: 20px;

@@ -1,0 +1,17 @@
+#WelcomeEnglish, #WelcomeEspaniol {
+    text-align: center;
+    color: rgb(246, 252, 248);
+    font-size: 20px;
+}
+#WelcomeEnglish h2, #WelcomeEspaniol h2{
+    margin: 25px;
+}
+
+#WelcomeEnglish p, #WelcomeEspaniol p{
+    line-height: 25px;
+}
+
+#WelcomeEnglish button, #WelcomeEspaniol button{
+    margin-top: 25px;
+    
+}

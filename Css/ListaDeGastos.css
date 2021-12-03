@@ -1,3 +1,8 @@
+#ListaDeGastos{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 #htmlInterface_DetalleGasto {
   position: fixed;
   z-index: 3;

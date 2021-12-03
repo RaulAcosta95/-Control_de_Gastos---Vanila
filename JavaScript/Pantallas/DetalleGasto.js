@@ -11,7 +11,7 @@ function _mostrarDetalle(id){
  `
     <div id="htmlInterface_DetalleGasto">
         <button onclick="_quitarDetalleGasto()" id="buttonX">X</button>
-        <h3>Mi Control De Gastos.com</h3>
+        <h1>Mi Control De Gastos.com</h1>
             <p>${data.tituloGasto}</p>
             <p>${data.descripcionGasto}</p>
             <p>$${data.cantidadGasto}</p>
