@@ -9,10 +9,11 @@ let WelcomeEspaniol = document.getElementById("WelcomeEspaniol");
 let ListaDeGastos = document.getElementById("ListaDeGastos");
 let ContenedorBotonHome = document.getElementById("ContenedorBotonHome");
 let AboutUs = document.getElementById("AboutUs");
+let botonAbout = document.getElementById("botonAbout");
 
-_welcomeInicio();
+_welcomeEnglish();
 
-function _welcomeInicio() {
+function _welcomeEnglish() {
   ContenedorBotonNuevoGasto.setAttribute("style", `display:none;`);
   ListaDeGastos.setAttribute("style",             `display:none;`);
   WelcomeEspaniol.setAttribute("style",           `display:none;`);
@@ -20,17 +21,30 @@ function _welcomeInicio() {
   AboutUs.setAttribute("style",                   `display:none;`);
   WelcomeEnglish.setAttribute("style",            `display:block;`);
   ContenedorBotonIniciarApp.setAttribute("style", `display:flex;`);
+  botonAbout.setAttribute("style",                `display:block;`);
 
 }
 
-function _AparecerPaginaAboutEspaniol() {}
+function _welcomeSpanish() {}
 
 function _iniciarApp() {
   WelcomeEnglish.setAttribute("style",            `display:none;`);
   WelcomeEspaniol.setAttribute("style",           `display:none;`);
   ContenedorBotonIniciarApp.setAttribute("style", `display:none;`);
   AboutUs.setAttribute("style",                   `display:none;`);
+  botonAbout.setAttribute("style",                `display:none;`);
   ContenedorBotonNuevoGasto.setAttribute("style", `display:flex;`);
   ListaDeGastos.setAttribute("style",             `display:flex;`);
   ContenedorBotonHome.setAttribute("style",       `display:block;`);
+}
+
+function _apareceAbout() {
+  WelcomeEnglish.setAttribute("style",            `display:none;`);
+  WelcomeEspaniol.setAttribute("style",           `display:none;`);
+  botonAbout.setAttribute("style",                `display:none;`);
+  AboutUs.setAttribute("style",                   `display:block;`);
+  ContenedorBotonHome.setAttribute("style",       `display:block;`);
+  ContenedorBotonIniciarApp.setAttribute("style", `display:flex;`);
+
+
 }

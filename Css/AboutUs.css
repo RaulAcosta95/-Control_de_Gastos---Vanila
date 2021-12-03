@@ -1,0 +1,26 @@
+#AboutUs{
+    text-align: center;
+    color: rgb(246, 252, 248);
+    font-size: 20px;
+}
+#AboutUs h2{
+    margin: 25px;
+}
+
+#AboutUs p{
+    line-height: 30px;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+#AboutUs a{
+    color: rgb(246, 252, 248);
+}
+
+#botonAbout{
+    margin-top: 25px;
+}
+
+#AporteIconos{
+    margin-top: 30px;
+}
