@@ -22,14 +22,14 @@ let htmlInterface_AniadirNuevoGasto =
 
 function _ponerInterface() {
   console.log("_ponerInterface");
-  let article2 = document.getElementById("article2");
-  article2.innerHTML = htmlInterface_AniadirNuevoGasto;
+  let aniadirNuevoGasto = document.getElementById("aniadirNuevoGasto");
+  aniadirNuevoGasto.innerHTML = htmlInterface_AniadirNuevoGasto;
 }
 
 function _quitarInterface() {
   console.log("_quitarInterface");
-  let article2 = document.getElementById("article2");
-  article2.innerHTML = "";
+  let aniadirNuevoGasto = document.getElementById("aniadirNuevoGasto");
+  aniadirNuevoGasto.innerHTML = "";
 }
 
 //Las funciones que usen let en el archivo JavaScript se aislan
