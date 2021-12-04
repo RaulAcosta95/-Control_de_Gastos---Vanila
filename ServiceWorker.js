@@ -1,6 +1,6 @@
 //Revisar Service Worker porque en algún lado no pasa el Audit
-const STATIC_CACHE_NAME = "site-static-v1";
-const DYNAMIC_CACHE_NAME = "site-dynamic-v1";
+const STATIC_CACHE_NAME = "site-static-v2";
+const DYNAMIC_CACHE_NAME = "site-dynamic-v2";
 //No hay Package.json
 //El AUDIT REPORT LIGHTHOUSE no se realiza si hay algún error
 const ASSETS = [
@@ -11,15 +11,19 @@ const ASSETS = [
   "/ServiceWorker.js",
   "/NotasDeDesarrollo.txt",
   
-  "/Css/article1.css",
-  "/Css/article2.css",
-  "/Css/article2Movile.css",
+  "/Css/AboutUs.css",
+  "/Css/AniadirNuevoGasto.css",
+  "/Css/AniadirNuevoGastoMovile.css",
   "/Css/body.css",
+  "/Css/botonAbout.css",
+  "/Css/botonHome.css",
   "/Css/botonNuevoGasto.css",
   "/Css/buttonX.css",
-  "/Css/gastoEnLista.css",
+  "/Css/footer.css",
+  "/Css/GastoEnLista.css",
   "/Css/gastoEnListaDesktop.css",
   "/Css/ListaDeGastos.css",
+  "/Css/Welcome.css",
 
   "/Imagenes/iconos/maskable_icon_x72.png",
   "/Imagenes/iconos/maskable_icon_x96.png",
@@ -33,9 +37,13 @@ const ASSETS = [
   "/Imagenes/iconos/maskable_icon.png",
   "/Imagenes/Eliminar.png",
   "/Imagenes/Error.svg",
+  "/Imagenes/Home.png",
+
   "/JavaScript/Pantallas/AniadirNuevoGasto.js",
   "/JavaScript/Pantallas/DetalleGasto.js",
   "/JavaScript/Pantallas/ModificarGasto.js",
+  "/JavaScript/Pantallas/PantallasPrincipales.js",
+
   "/JavaScript/app.js",
   "/JavaScript/GastoEnLista.js",
   "/JavaScript/ListaGastos.js",
