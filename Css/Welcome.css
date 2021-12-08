@@ -10,4 +10,6 @@
 #WelcomeEnglish p, #WelcomeEspaniol p{
     line-height: 30px;
     font-size: 25px;
+
+    max-width: 90vw;
 }
