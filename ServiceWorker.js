@@ -34,6 +34,7 @@ const ASSETS = [
   "/Imagenes/iconos/maskable_icon_x384.png",
   "/Imagenes/iconos/maskable_icon_x512.png",
   "/Imagenes/iconos/maskable_icon.png",
+  "/Imagenes/EveryPixelLogo.png",
   "/Imagenes/Eliminar.png",
   "/Imagenes/Error.svg",
   "/Imagenes/Home.png",
