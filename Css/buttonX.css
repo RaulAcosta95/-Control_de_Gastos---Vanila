@@ -23,7 +23,6 @@
 @media screen and (max-width: 768px) {
   #buttonX {
     right: 10px;
-    top: 10px;
     height: 35px;
     width: 35px;
   }

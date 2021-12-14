@@ -1,6 +1,6 @@
 //Revisar Service Worker porque en algún lado no pasa el Audit
-const STATIC_CACHE_NAME = "site-static-v2";
-const DYNAMIC_CACHE_NAME = "site-dynamic-v2";
+const STATIC_CACHE_NAME = "site-static-v1";
+const DYNAMIC_CACHE_NAME = "site-dynamic-v1";
 //No hay Package.json
 //El AUDIT REPORT LIGHTHOUSE no se realiza si hay algún error
 const ASSETS = [
@@ -17,6 +17,7 @@ const ASSETS = [
   "/Css/body.css",
   "/Css/botonAbout.css",
   "/Css/botonHome.css",
+  "/Css/botonIniciarApp.css",
   "/Css/botonNuevoGasto.css",
   "/Css/buttonX.css",
   "/Css/footer.css",
@@ -50,6 +51,16 @@ const ASSETS = [
   "/JavaScript/LocalStorage.js",
 ];
 
+self.addEventListener("install", (evt) => {
+  //console.log('service worker installed');
+  evt.waitUntil(
+    caches.open(STATIC_CACHE_NAME).then((cache) => {
+      console.log("Cargando Cache");
+      cache.addAll(ASSETS);
+    })
+  );
+});
+
 // cache size limit function
 const limitCacheSize = (name, size) => {
   caches.open(name).then((cache) => {
@@ -61,15 +72,7 @@ const limitCacheSize = (name, size) => {
   });
 };
 
-self.addEventListener("install", (evt) => {
-  //console.log('service worker installed');
-  evt.waitUntil(
-    caches.open(STATIC_CACHE_NAME).then((cache) => {
-      console.log("caching shell assets");
-      cache.addAll(ASSETS);
-    })
-  );
-});
+
 
 // activate event
 self.addEventListener("activate", (evt) => {
