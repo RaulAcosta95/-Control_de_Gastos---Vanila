@@ -18,6 +18,7 @@ const ASSETS = [
   "/Css/botonIniciarApp.css",
   "/Css/botonNuevoGasto.css",
   "/Css/buttonX.css",
+  "/Css/fallback.css",
   "/Css/footer.css",
   "/Css/GastoEnLista.css",
   "/Css/gastoEnListaDesktop.css",
