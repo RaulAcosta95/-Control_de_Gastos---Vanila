@@ -1,15 +1,7 @@
+//Si el navegador soporta los Service Worker (Navegadores actuales)
 if('serviceWorker' in navigator){
+    //Promesa para registrar el service Worker
     navigator.serviceWorker.register('./ServiceWorker.js')
     .then((reg) => console.log('Service Worker Registered', reg))
     .catch((err) => console.log('Service Worker NOT Registered', err));
 }
-
-// if(navigator.onLine) {
-//     console.log('Es online');
-// } else {
-//     setTimeout(() => {
-//         console.log('Es Offline');
-//         document.location.href="fallback.html";
-//     }, 1000);
-
-// }

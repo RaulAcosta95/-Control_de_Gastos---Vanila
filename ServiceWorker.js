@@ -1,7 +1,5 @@
-//Revisar Service Worker porque en algún lado no pasa el Audit
-const STATIC_CACHE_NAME = "site-static-v1";
-const DYNAMIC_CACHE_NAME = "site-dynamic-v1";
-//No hay Package.json
+const STATIC_CACHE_NAME = "site-static-v2";
+
 //El AUDIT REPORT LIGHTHOUSE no se realiza si hay algún error
 const ASSETS = [
   //Los ASSETS son archivos en ruta para pre-cargar
@@ -51,73 +49,62 @@ const ASSETS = [
   "/JavaScript/LocalStorage.js",
 ];
 
+//Al ser instalado el Service Worker
 self.addEventListener("install", (evt) => {
-  //console.log('service worker installed');
+  console.log('Service Worker se ha Instalado');
+
+  //Añade el caché
   evt.waitUntil(
-    caches.open(STATIC_CACHE_NAME).then((cache) => {
-      console.log("Cargando Cache");
+    caches.open(STATIC_CACHE_NAME).then( (cache) => {
       cache.addAll(ASSETS);
+      console.log("Caché añadido correctamente");
     })
   );
+
 });
-
-// cache size limit function
-const limitCacheSize = (name, size) => {
-  caches.open(name).then((cache) => {
-    cache.keys().then((keys) => {
-      if (keys.length > size) {
-        cache.delete(keys[0]).then(limitCacheSize(name, size));
-      }
-    });
-  });
-};
-
-
-
-// activate event
+  
+//Cuando se activa el Service Worker (cada vez que se entra a la página)
 self.addEventListener("activate", (evt) => {
+  console.log('Service Worker se ha Activado');
+
+  //Al actualizarse la versión del caché, va a eliminar las versiones anteriores
   evt.waitUntil(
-    caches.keys().then((keys) => {
-      return Promise.all(
-        keys.filter(
-            ( key ) => key !== STATIC_CACHE_NAME && key !== DYNAMIC_CACHE_NAME
-          ).map( ( key ) => caches.delete(key))
-      );
-    })
-  );
+    caches.keys().then( (keys) => {
+      for (let i = 0; i < keys.length; i++) {
+        if (keys[i] !== STATIC_CACHE_NAME) {
+          caches.delete(keys[i]);
+        }
+      }
+    }));
 });
 
+//Ocurre al hacer una petición
 self.addEventListener("fetch", (evt) => {
+
   if (navigator.onLine) {
+    console.log('Online Mode');
   } else {
-      console.log("Offline");
-      this.dispatchEvent( //No necesario por ahora
-        new CustomEvent("modoOffline", {
-          bubbles: true,
-          composed: true,
-        })
-    );
+    console.log("Offline Mode");
+
+    //En caso que no funcione el modo offline
+    //   this.dispatchEvent(
+    //     new CustomEvent("modoOffline", {
+    //       bubbles: true,
+    //       composed: true,
+    //     })
+    // );
+
     evt.respondWith(
-      caches
-        .match(evt.request)
-        .then((cacheRes) => {
-          return (
-            cacheRes ||
-            fetch(evt.request).then((fetchRes) => {
-              return caches.open(STATIC_CACHE_NAME).then((cache) => {
-                cache.put(evt.request.url, fetchRes.clone());
-                // check cached items size
-                limitCacheSize(STATIC_CACHE_NAME, 60);
-                return fetchRes;
-              });
-            })
-          );
-        })
-        .catch(() => {
+      //Busca en el caché los elementos a los que intenta hacer fetch
+      caches.match(evt.request).then( (cacheRes) => {
+          return (cacheRes);
+        }).catch( () => {
+          //En caso que ocurra un error al buscar los elementos en caché
+          //Si se intenta ingresar a otra página del dominio que no existe
           if (evt.request.url.indexOf(".html") > -1) {
             return caches.match("fallback.html");
           }
-        })
-    );
+    }));
   }
+
 });

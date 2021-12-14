@@ -6,7 +6,7 @@ function _modificarGasto(id){
     `
     <div id="htmlInterface_AniadirNuevoGasto">
     <button onclick="_quitarInterfaceModificarGasto()" id="buttonX">X</button>
-    <h1>Mi Control De Gastos.com</h1>
+    <h1>Mi Control de Gastos.com</h1>
     <div id="formAniadirNuevoGasto">
         <form id="formDatosNuevoGasto">
             
