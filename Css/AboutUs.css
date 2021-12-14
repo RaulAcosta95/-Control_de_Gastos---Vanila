@@ -2,6 +2,7 @@
     text-align: center;
     color: rgb(246, 252, 248);
     font-size: 20px;
+    justify-content: center;
 }
 #AboutUs h2{
     margin: 25px;
@@ -10,11 +11,14 @@
 #AboutUs p{
     line-height: 30px;
     font-size: 25px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
+    max-width: 90vw;
+    margin-bottom: 20px;
 }
 
 #AboutUs a{
     color: rgb(246, 252, 248);
+    width: 100vw;
 }
 
 #botonAbout{
@@ -23,4 +27,19 @@
 
 #AporteIconos{
     margin-top: 30px;
+    width: 100vw;
+}
+
+#everyPixel, #miControlDeGastosFacebook{
+    margin-bottom: 30px;
+}
+
+#everyPixel img, #miControlDeGastosFacebook img{
+    width: 250px;
+}
+#everyPixel img:hover, #miControlDeGastosFacebook img:hover{
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    transition: 0.5s;
 }

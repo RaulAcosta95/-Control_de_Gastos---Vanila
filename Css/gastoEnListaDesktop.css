@@ -3,8 +3,8 @@
         text-align: center;
     }
 
-    .gastoEnLista h4, .gastoEnLista p{
-        width: 90vw;
+    .gastoEnLista h4, .gastoEnLista .precioGasto{
+        min-width: 90vw;
         margin: 0px;
     }
 

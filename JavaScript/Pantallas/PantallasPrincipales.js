@@ -50,7 +50,7 @@ function _apareceAbout() {
   aniadirNuevoGasto.setAttribute("style",         `display:none;`);
   botonAbout.setAttribute("style",                `display:none;`);
   
-  AboutUs.setAttribute("style",                   `display:block;`);
+  AboutUs.setAttribute("style",                   `display:flex;`);
   ContenedorBotonIniciarApp.setAttribute("style", `display:flex;`);
   ContenedorBotonHome.setAttribute("style",       `display:block;`);
 }

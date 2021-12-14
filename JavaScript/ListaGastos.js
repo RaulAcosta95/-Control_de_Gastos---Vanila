@@ -13,7 +13,7 @@ function _actualizarListaGastos(listaDeGastosLocalStorage) {
             <div class="gastoEnLista" id="${listaDeGastos[i].id}">
                 <div onclick="_mostrarDetalle(${listaDeGastos[i].id})" class="contenedorInfoGastoEnLista">
                     <h4>${listaDeGastos[i].tituloGasto}</h4>
-                    <p>$${listaDeGastos[i].cantidadGasto}</p>
+                    <p class="precioGasto">$${listaDeGastos[i].cantidadGasto}</p>
                 </div>
                 <div class="contenedorBotonGastoEnLista">
                     <button onclick="_eliminarGasto(${listaDeGastos[i].id})">
