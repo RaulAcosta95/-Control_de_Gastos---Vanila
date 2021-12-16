@@ -1,4 +1,4 @@
-const STATIC_CACHE_NAME = "site-static-v1";
+const STATIC_CACHE_NAME = "site-static-v2";
 
 //El AUDIT REPORT LIGHTHOUSE no se realiza si hay algún error
 const ASSETS = [
@@ -84,7 +84,6 @@ self.addEventListener("activate", (evt) => {
 self.addEventListener("fetch", (evt) => {
 
   if (navigator.onLine) {
-    console.log('Online Mode');
   } else {
     console.log("Offline Mode");
 
