@@ -4,3 +4,6 @@ if (window.location.host == "micontroldegastos.com") {
   location.replace(`https:${location.href.substring(location.protocol.length)}`);
   }
 }
+this.dispatchEvent(new CustomEvent('RedirectHTTPS'),{
+  bubbles:true
+});
