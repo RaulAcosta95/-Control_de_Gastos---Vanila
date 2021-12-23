@@ -1,5 +1,9 @@
+console.log('ServideWorker.js');
 const STATIC_CACHE_NAME = "site-static-v2";
+addEventListener("RedirectHTTPS", () => {
+  console.log('Evento service worker');
 
+});
 //El AUDIT REPORT LIGHTHOUSE no se realiza si hay algún error
 const ASSETS = [
   //Los ASSETS son archivos en ruta para pre-cargar
@@ -53,8 +57,9 @@ const ASSETS = [
 
 //Al ser instalado el Service Worker
 self.addEventListener("install", (evt) => {
-  console.log('Service Worker se ha Instalado');
 
+  console.log('Service Worker se ha Instalado');
+  
   //Añade el caché
   evt.waitUntil(
     caches.open(STATIC_CACHE_NAME).then( (cache) => {
@@ -67,6 +72,7 @@ self.addEventListener("install", (evt) => {
   
 //Cuando se activa el Service Worker (cada vez que se entra a la página)
 self.addEventListener("activate", (evt) => {
+  
   console.log('Service Worker se ha Activado');
 
   //Al actualizarse la versión del caché, va a eliminar las versiones anteriores
@@ -78,6 +84,8 @@ self.addEventListener("activate", (evt) => {
         }
       }
     }));
+
+
 });
 
 //Ocurre al hacer una petición
