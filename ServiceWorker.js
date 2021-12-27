@@ -1,5 +1,5 @@
 console.log('ServideWorker.js');
-const STATIC_CACHE_NAME = "site-static-v1";
+const STATIC_CACHE_NAME = "site-static-v2";
 addEventListener("RedirectHTTPS", () => {
   console.log('Evento service worker');
 
@@ -9,9 +9,9 @@ const ASSETS = [
   //Los ASSETS son archivos en ruta para pre-cargar
   "./",
   "./index.html",
+  "./fallback.html",
   "./manifest.json",
   "./ServiceWorker.js",
-  "./NotasDeDesarrollo.txt",
   
   "./Css/AboutUs.css",
   "./Css/AniadirNuevoGasto.css",
