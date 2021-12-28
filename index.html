@@ -39,6 +39,7 @@
     <link rel="stylesheet" href="./Css/botonIniciarApp.css">
     <link rel="stylesheet" href="/Css/botonAbout.css">
     <link rel="stylesheet" href="./Css/AboutUs.css">
+    <link rel="stylesheet" href="./Css/Resultados.css">
 
     <!-- AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1856537321021655" crossorigin="anonymous"></script>
@@ -58,23 +59,25 @@
     </header>
 
     <section>
-
       <section>
         <article id="ContenedorBotonHome">
-          <button id="botonHome" onclick="_welcomeEnglish()">
+          <button id="botonHome" onclick="_welcomeSpanish()">
             <img src="./Imagenes/Home.png" alt="Imagen Home">
           </button>
         </article>
+
         <article id="ContenedorBotonIniciarApp">
           <button id="botonIniciarApp" onclick="_iniciarApp()">
             Iniciar App
           </button>
         </article>
+
         <article id="ContenedorBotonNuevoGasto">
           <button id="botonNuevoGasto" onclick="_ponerAniadirNuevoGasto()">
             Nuevo Gasto
           </button>
         </article>
+
         <!-- AniadirNuevoGasto -->
         <article id="aniadirNuevoGasto">
           <div id="htmlInterface_AniadirNuevoGasto">
@@ -91,6 +94,14 @@
                 <button onclick="_botonEnviarFormulario()" id="botonEnviarFormulario">Enviar</button>
             </div>
         </div>
+        </article>
+
+        <!-- Dinero Total -->
+        <article id="Resultados">
+          <p id="Efectivo">$0</p>
+          <p id="DineroTotal">$0</p>
+          <p id="DineroRestante">$0</p>
+          <p id="GastosTotales">$0</p>
         </article>
   
         <!-- Lista de Gastos -->

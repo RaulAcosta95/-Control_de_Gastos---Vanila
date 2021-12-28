@@ -71,7 +71,6 @@ function modificarGasto(id) {
     "newDescripcionGasto"
   ).value;
   let newCantidadGasto = document.getElementById("newCantidadGasto").value;
-
   for (let object of listaDeGastosLocalStorage) {
     if (object.id == id) {
       object.tituloGasto = newTituloGasto;
@@ -102,4 +101,14 @@ function eliminarGasto(id) {
   );
   console.log("Local Storage Actualizado");
   _actualizarListaGastos(listaDeGastosLocalStorage); //No es bajo acoplamiento... buscar otra manera
+}
+
+function calcularGastosTotales() {
+  let gastosTotales = 0;
+  for (let i = 0; i < listaDeGastosLocalStorage.length; i++) {
+    gastosTotales += parseFloat(listaDeGastosLocalStorage[i].cantidadGasto);
+  }
+  console.log(gastosTotales);
+  let GastosTotales = document.getElementById("GastosTotales");
+  GastosTotales.innerHTML = "$" + gastosTotales;
 }
