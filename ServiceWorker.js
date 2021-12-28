@@ -1,5 +1,5 @@
 console.log('ServideWorker.js');
-const STATIC_CACHE_NAME = "site-static-v2";
+const STATIC_CACHE_NAME = "site-static-v1";
 addEventListener("RedirectHTTPS", () => {
   console.log('Evento service worker');
 
@@ -28,6 +28,7 @@ const ASSETS = [
   "./Css/gastoEnListaDesktop.css",
   "./Css/ListaDeGastos.css",
   "./Css/Welcome.css",
+  "./Css/Resultados.css",
 
   "./Imagenes/iconos/maskable_icon_x72.png",
   "./Imagenes/iconos/maskable_icon_x96.png",
