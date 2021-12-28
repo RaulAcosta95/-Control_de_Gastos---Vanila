@@ -5,30 +5,29 @@
 //A menos que se use "let" al declarar una función o variable
 function _mostrarDetalle(id){
     console.log('_mostrarDetalle ' + id);
+    _ponerDetaleGasto();
     let data = enviaDatosDeLocalStorage(id);
     
-    let htmlInterface_DetalleGasto = 
+    let detalleGasto = 
  `
-    <div id="htmlInterface_DetalleGasto">
         <button onclick="_quitarDetalleGasto()" id="buttonX">X</button>
-        <h1>Mi Control de Gastos.com</h1>
             <p>${data.tituloGasto}</p>
             <p>${data.descripcionGasto}</p>
             <p>$${data.cantidadGasto}</p>
         <div id="contenedorBoton">
             <button onclick="_modificarGasto(${data.id})" id="botonModificarGasto">Modificar</button>
         </div>
-    </div>
 `
 
-    let article4 = document.getElementById("article4");
-    article4.innerHTML = htmlInterface_DetalleGasto;
+    let htmlInterface_DetalleGasto = document.getElementById("htmlInterface_DetalleGasto");
+    htmlInterface_DetalleGasto.innerHTML = detalleGasto;
 
 
 }
 
 let _quitarDetalleGasto = function () {
-    let article4 = document.getElementById("article4");
-    article4.innerHTML = "";
+    let htmlInterface_DetalleGasto = document.getElementById("htmlInterface_DetalleGasto");
+    htmlInterface_DetalleGasto.innerHTML = "";
+    _iniciarApp();
 }
 

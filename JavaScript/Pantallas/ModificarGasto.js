@@ -1,12 +1,12 @@
 function _modificarGasto(id){
     console.log('_modificarGasto ' + id);
+    _ponerModificarGasto();
     let data = enviaDatosDeLocalStorage(id);
-    let article4 = document.getElementById('article4');
-    article4.innerHTML = 
+    let htmlInterface_ModificarGasto = document.getElementById('htmlInterface_ModificarGasto');
+    htmlInterface_ModificarGasto.innerHTML = 
     `
-    <div id="htmlInterface_AniadirNuevoGasto">
+    <div id="htmlInterface_ModificarGasto">
     <button onclick="_quitarInterfaceModificarGasto()" id="buttonX">X</button>
-    <h1>Mi Control de Gastos.com</h1>
     <div id="formAniadirNuevoGasto">
         <form id="formDatosNuevoGasto">
             
@@ -23,8 +23,9 @@ function _modificarGasto(id){
 }
 
 function _quitarInterfaceModificarGasto(){
-    let article4 = document.getElementById('article4');
-    article4.innerHTML = "";
+    let htmlInterface_ModificarGasto = document.getElementById('htmlInterface_ModificarGasto');
+    htmlInterface_ModificarGasto.innerHTML = "";
+    _iniciarApp();
 }
 
 function _botonModificarGasto(id){

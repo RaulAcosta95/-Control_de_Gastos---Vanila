@@ -4,16 +4,8 @@
   flex-wrap: wrap;
 }
 #htmlInterface_DetalleGasto {
-  position: fixed;
-  z-index: 3;
-
-  height: 100vh;
-  width: 100vw;
-
+  margin-top: 20px;
   background-color: rgb(1, 113, 189);
-
-  top: 0;
-  left: 0;
 
   font-family: monospace;
   font-weight: bold;

@@ -24,6 +24,9 @@ h1 {
   
 }
 
+header{
+    display: block;
+}
 
 @media screen and (max-width: 768px){
       h1 {
